@@ -3,9 +3,8 @@ import Trash from '../assets/images/trash.png'
 
 export default function DeletItem(props) {
     function handleDelet(e) {
-        // console.log(e.target.parentNode.parentNode.firstChild.nextSibling.innerText);
-        console.log(props.item.itemId);
-        console.log(props.items.filter(item => item.id != props.item.id));
+        const items = props.items.filter(item => item.id !== props.itemId)
+        props.onHandleDeleted(items)
     }
 
     return (

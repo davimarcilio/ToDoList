@@ -1,22 +1,25 @@
 import './styles/Todo.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from './assets/images/logo.png';
 import Plus from './assets/images/plus.png';
 import Content from './components/Content';
 import Item from './components/Item';
 
 
-
-
 export default function App() {
   const [items, setItems] = useState([])
   const [text, setText] = useState('')
+  function onHandleDeleted(items) {
+    setItems(items)
+  }
+
   function createTodo(e) {
     e.preventDefault();
     let item = new Item(text, false)
     setItems([...items, item])
     setText('')
   }
+
   return (
     <main >
       <header className='w-full py-20 flex flex-col justify-center items-center bg-gray-700-figma'>
@@ -30,7 +33,7 @@ export default function App() {
             <img className='ml-2 pr-1' src={Plus} alt="more" />
           </button>
         </form>
-        <Content found={true} items={items} />
+        <Content found={true} items={items} onHandleDeleted={onHandleDeleted} />
       </section>
 
 
