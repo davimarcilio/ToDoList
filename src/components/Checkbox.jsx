@@ -11,9 +11,11 @@ export default function CheckBox(props) {
         if (this.className.includes('checked')) {
             this.className = 'h-5 w-5 border-2 rounded-full border-blue-figma flex items-center justify-center'
             this.children[0].className = 'hidden'
+            props.onChecked(false)
         } else {
             this.className = 'checked h-5 w-5 border-2 rounded-full border-purple-figma flex items-center justify-center bg-purple-figma'
             this.children[0].className = ''
+            props.onChecked(true)
         }
 
     }

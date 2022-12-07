@@ -1,9 +1,20 @@
 import React from "react";
-import Item from "./Item";
+import ListItem from "./ListItem";
 export default function List(props) {
+    // console.log(props.items);
     return (
+
         <ul className="flex flex-col gap-3">
-            <Item></Item>
+
+            {props.items.map((item) => {
+
+
+                <ListItem item={item}></ListItem>
+
+            })}
+
+
+
         </ul>
     )
 }

@@ -13,7 +13,7 @@ export default function Content(props) {
                     <h1 className='text-purple-figma font-bold font-Inter text-sm'>Concluídas</h1>
                 </Counter>
             </section>
-            {props.found ? <List /> : <Non />}
+            {props.found ? <List items={props.items} /> : <Non />}
         </section>
     )
 }
