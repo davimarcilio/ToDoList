@@ -9,7 +9,7 @@ export default function List(props) {
             {props.items.map((item) => {
 
 
-                <ListItem item={item}></ListItem>
+                return <ListItem item={item}></ListItem>
 
             })}
 
