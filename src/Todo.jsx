@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Logo from './assets/images/logo.png';
 import Plus from './assets/images/plus.png';
 import Content from './components/Content';
-import PreviousMap from 'postcss/lib/previous-map';
+import Item from './components/Item';
+
 
 
 
@@ -11,8 +12,10 @@ export default function App() {
   const [items, setItems] = useState([])
   const [text, setText] = useState('')
   function createTodo(e) {
-    e.preventDefault()
-    setItems([...items, text])
+    e.preventDefault();
+    let item = new Item(text, false)
+    setItems([...items, item])
+    setText('')
   }
   return (
     <main >
