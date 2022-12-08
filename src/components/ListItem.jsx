@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Checkbox from './Checkbox';
 import DeletedItem from './DeletItem';
 
@@ -7,16 +7,13 @@ import DeletedItem from './DeletItem';
 
 export default function ListItem(props) {
 
-    const [checked, setChecked] = useState(props.item.checked);
 
     function onChecked(checked) {
         props.item.checked = checked;
-
+        localStorage.setItem('items', JSON.stringify(props.items))
         props.onCheckedTasks()
     }
-    useEffect(() => {
-        setChecked(checked)
-    }, [checked])
+
 
 
     return (

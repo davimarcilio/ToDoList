@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Counter from './Counter';
 import Non from './Non';
 import List from './List';
 export default function Content(props) {
     const [checkedTasks, setCheckedTasks] = useState(0);
-
     function onCheckedTasks() {
         setCheckedTasks(props.items.filter(item => item.checked === true).length)
     }
-
+    useEffect(() => {
+        onCheckedTasks();
+    })
     return (
         <section className='flex flex-col gap-6 mt-16'>
             <section className='flex justify-between'>

@@ -7,10 +7,14 @@ import Item from './components/Item';
 
 
 export default function App() {
-  const [items, setItems] = useState([])
+  let localItems = JSON.parse(localStorage.getItem('items'));
+  if (!!!localItems) {
+    localItems = [];
+  }
+  const [items, setItems] = useState(localItems)
   const [text, setText] = useState('')
   const [found, setFound] = useState(false)
-
+  const allStoragedItems = []
 
   function onHandleDeleted(items) {
     setItems(items)
@@ -18,10 +22,22 @@ export default function App() {
 
 
 
+
+  useEffect(() => {
+
+
+    if (!!localItems) {
+      localItems.map(item => {
+        return allStoragedItems.push(new Item(item.text, item.checked))
+      })
+      setItems(allStoragedItems);
+    }
+
+  }, [])
+
   function onHandleText(e) {
     setText(e.target.value)
   }
-
 
   useEffect(() => {
     if (items.length !== 0) {
@@ -31,16 +47,19 @@ export default function App() {
 
   }, [items.length])
 
+  useEffect(() => {
+    localStorage.setItem('items', JSON.stringify(items))
 
+  }, [items])
 
   function createTodo(e) {
 
     e.preventDefault();
 
     if (!!text) {
-
       let item = new Item(text, false)
       setItems([...items, item])
+
       setText('')
 
     }
