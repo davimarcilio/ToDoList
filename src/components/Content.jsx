@@ -11,7 +11,7 @@ export default function Content(props) {
         onCheckedTasks();
     })
     return (
-        <section className='flex flex-col gap-6 mt-16'>
+        <section className='flex flex-col gap-6 mt-16 mb-3'>
             <section className='flex justify-between'>
                 <Counter count={props.items.length}>
                     <h1 className='text-blue-figma font-bold font-Inter text-sm '>Tarefas criadas</h1>

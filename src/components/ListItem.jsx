@@ -20,7 +20,7 @@ export default function ListItem(props) {
         <li className={props.item.checked ? "transition-colors duration-500 font-Inter text-sm text-gray-100-figma p-4 bg-gray-500-figma border-gray-500-figma border rounded-lg flex justify-between items-start" : "duration-500 transition-colors font-Inter text-sm text-gray-100-figma p-4 bg-gray-500-figma border-gray-300-figma border rounded-lg flex justify-between items-start"}>
             <div className='flex gap-3'>
                 <Checkbox items={props.items} item={props.item} onChecked={onChecked}></Checkbox>
-                <p className={props.item.checked ? "transition-all duration-500 transiti max-w-2xl line-through text-gray-400-figma" : "duration-500 transition-all max-w-2xl"}>
+                <p className={props.item.checked ? "ml-9 pr-1 transition-all duration-500 max-w-2xl line-through text-gray-400-figma" : "ml-9 pr-1 duration-500 transition-all max-w-2xl"}>
                     {props.item.text}
                 </p>
             </div>
