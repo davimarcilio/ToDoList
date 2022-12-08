@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Check from '../assets/images/check.png';
 export default function CheckBox(props) {
     function checked(button, img) {
@@ -12,11 +12,6 @@ export default function CheckBox(props) {
         return button.className = 'checked checkbox h-5 w-5 border-2 rounded-full border-purple-figma flex items-center justify-center bg-purple-figma';
     }
     function handleCheck(e) {
-
-        // const item = props.items.filter(item => item.id === props.item.id)
-        // const items = props.items.filter(item => item.id !== props.item.id)
-
-
 
         if (e.target.className.includes('img')) {
             let button = e.target.parentNode;
@@ -32,6 +27,6 @@ export default function CheckBox(props) {
     }
     return (
 
-        <button onClick={handleCheck} className="checkbox h-5 w-5 border-2 rounded-full border-blue-figma flex items-center justify-center"><img className="img hidden" src={Check} alt="check" /></button>
+        <button onClick={handleCheck} className={!props.item.checked ? "checkbox h-5 w-5 border-2 rounded-full border-blue-figma flex items-center justify-center" : 'checked checkbox h-5 w-5 border-2 rounded-full border-purple-figma flex items-center justify-center bg-purple-figma'}> <img className={!props.item.checked ? "img hidden" : "img"} src={Check} alt="check" /></button >
     )
 }
