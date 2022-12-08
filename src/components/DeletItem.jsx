@@ -1,5 +1,5 @@
 import React from 'react';
-import Trash from '../assets/images/trash.png'
+import Trash from './Trash'
 
 export default function DeletItem(props) {
     function handleDelet(e) {
@@ -10,6 +10,10 @@ export default function DeletItem(props) {
 
 
     return (
-        <button onClick={handleDelet}><img className="w-fit" src={Trash} alt="trash" /></button>
+        <button onClick={handleDelet}>
+            <Trash />
+        </button>
     )
 }
+
+{/* <img className="w-fit hover:bg-gray-400-figma rounded " src={Trash} alt="trash" /> */ }

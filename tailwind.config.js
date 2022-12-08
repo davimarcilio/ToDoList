@@ -13,6 +13,9 @@ module.exports = {
         'blue-dark-figma': '#1E6F9F',
         'blue-figma': '#4EA8DE',
         'purple-figma': '#8284FA',
+        'purple-dark-figma': '#5E60CE',
+        'danger-figma': '#E25858',
+        'blue-dark-transparent-figma': 'rgba(30, 111, 159,0.2)'
       },
       fontFamily: {
         "Inter": 'Inter'

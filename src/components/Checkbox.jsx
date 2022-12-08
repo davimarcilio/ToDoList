@@ -27,6 +27,9 @@ export default function CheckBox(props) {
     }
     return (
 
-        <button onClick={handleCheck} className={!props.item.checked ? "checkbox h-5 w-5 border-2 rounded-full border-blue-figma flex items-center justify-center" : 'checked checkbox h-5 w-5 border-2 rounded-full border-purple-figma flex items-center justify-center bg-purple-figma'}> <img className={!props.item.checked ? "img hidden" : "img"} src={Check} alt="check" /></button >
+        <button onClick={handleCheck} className=
+            {!props.item.checked ? "checkbox transition-all hover:border-blue-dark-figma hover:bg-blue-dark-transparent-figma h-5 w-5 border-2 rounded-full border-blue-figma flex items-center justify-center"
+                : 'checked transition-all hover:border-purple-figma hover:bg-purple-figma checkbox h-5 w-5 border-2 rounded-full border-purple-dark-figma flex items-center justify-center bg-purple-dark-figma'}
+        > <img className={!props.item.checked ? "img hidden" : "img"} src={Check} alt="check" /></button >
     )
 }
