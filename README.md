@@ -30,3 +30,5 @@
 <hr>
 <h2>Crie sua lista para auxiliar no seus dia a dia!</h2>
 <p>Crie sua lista <a href="https://davimarcilio.github.io/ToDoList/">aqui.</a></p>
+<hr>
+<h2><a href="https://github.com/davimarcilio/ToDoListTypescript">Versão em Typescript</a></h2>
