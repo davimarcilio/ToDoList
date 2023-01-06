@@ -2,9 +2,8 @@
 <h2>Página para lhe ajudar a organizar melhor o seu dia.</h2>
 <p>Neste projeto foi utilizado React com hooks e ordenação de código com componentes.</p>
 <hr>
-<p>🎨 Design feito pelo <a
-        href="https://www.figma.com/file/2vR1RucyaCecM1OUwUDoXv/ToDo-List-👅-(Community)?node-id=12%3A106&t=gWAQm0rEna7KJKfE-0">Matheus
-        Susko
+<p>🎨 Design feito pela <a
+        href="https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate">Rocketseat
         (Figma)</a>
 </p>
 <p>👨‍💻 Desenvolvido com <a href="https://reactjs.org">React</a></p>
